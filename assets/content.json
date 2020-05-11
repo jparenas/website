@@ -1,0 +1,241 @@
+[
+  {
+    "type": "text",
+    "title": "About Me",
+    "id": "about-me",
+    "data": {
+      "text": "I am currently a junior student at DePauw University, studying Computer Science and Mathematics. I am interested in all fields of Computer Science, although I have focused in Data Science, Machine Learning, Full Stack Development, and always trying to learn new technologies and techniques, most of them outside of the academic scope. Outside of work I like photography and walking around. You can either see my resume for a concise view of most of what is in this page, or keep looking for more information on what I have done.",
+      "button": {
+        "text": "View my Resume",
+        "url": "/resume.pdf",
+        "icon": "mdi-file-document"
+      }
+    }
+  },
+  {
+    "type": "timeline",
+    "title": "Timeline",
+    "id": "timeline",
+    "data": [
+      {
+        "title": "Software Engineer Intern",
+        "subtitles": [
+          "Two Sigma Investments LP",
+          "New York City, New York",
+          "05/2020 - 08/2020"
+        ],
+        "id": "two-sigma",
+        "color": "#009EA9",
+        "image": "two-sigma.png",
+        "text": "* Will work on designing and creating user interfaces for internal facing applications and supporting internal tools for simulation and modeling.\n* Will use primarily Python for the applications."
+      },
+      {
+        "title": "Engineering Practicum Intern",
+        "subtitles": [
+          "Google LLC",
+          "San Francisco, California",
+          "05/2019 - 08/2019"
+        ],
+        "id": "google",
+        "color": "#FC0015",
+        "image": "google.png",
+        "text": "* Worked on designing and implementing a next-generation application for report creation, using already existing data sources, frameworks, and applications.\n* Implemented insights for the data using internal tooling, designing and adapting the full stack of the application.\n* Worked alongside UX designers to properly display the data.\n* Used primarily Java and Dart for the application."
+      },
+      {
+        "title": "Information Technology Associates Program Associate",
+        "subtitles": [
+          "DePauw University",
+          "Greencastle, Indiana",
+          "07/2017 - Present"
+        ],
+        "id": "depauw_itap",
+        "color": "#FFD001",
+        "image": "depauw.png",
+        "text": "* Trained on multiple rotations across different academic departments.\n * Researched Deep Learning and implemented multiple Deep Learning algorithms using Keras and PyTorch in Python.\n * Researched on timing attacks with Machine Learning applications.\n * Implemented web application to aid in teaching Computer Science courses by using supplemental materials."
+      },
+      {
+        "title": "Research Intern",
+        "subtitles": [
+          "DePauw University",
+          "Greencastle, Indiana",
+          "6/2018 - 9/2018"
+        ],
+        "id": "depauw_research",
+        "color": "#FFD001",
+        "image": "depauw.png",
+        "text": "* Researched Machine Learning and Artificial Intelligence.\n* Implemented a novel algorithm for a card game using Sci-kit learn in Python.\n* Paper accepted to the Association for the Advancement of Artificial Intelligence - 2019 and subsequently published (DOI: [10.1609/aaai.v33i01.33019627](https://doi.org/10.1609/aaai.v33i01.33019627)."
+      }
+    ]
+  },
+  {
+    "type": "cards",
+    "title": "Skills",
+    "id": "skills",
+    "cols": 4,
+    "data": [
+      {
+        "title": "C++",
+        "subtitles": ["Proficient"],
+        "id": "cpp",
+        "image": "c++.png"
+      },
+      {
+        "title": "Python",
+        "subtitles": ["Proficient"],
+        "id": "python",
+        "image": "python.png"
+      },
+      {
+        "title": "Java",
+        "subtitles": ["Proficient"],
+        "image": "java.png",
+        "id": "java"
+      },
+      {
+        "title": "JavaScript",
+        "subtitles": ["Proficient"],
+        "id": "javascript",
+        "image": "javascript.png"
+      },
+      {
+        "title": "NodeJS",
+        "subtitles": ["Proficient"],
+        "id": "node",
+        "image": "node.png"
+      },
+      {
+        "title": "Docker",
+        "subtitles": ["Proficient"],
+        "image": "docker.png",
+        "id": "docker"
+      },
+      {
+        "title": "Vue.js",
+        "subtitles": ["Proficient"],
+        "image": "vue.png",
+        "id": "vue"
+      },
+      {
+        "title": "Git",
+        "subtitles": ["Proficient"],
+        "image": "git.png",
+        "id": "git"
+      },
+      {
+        "title": "PyTorch",
+        "subtitles": ["Proficient"],
+        "image": "pytorch.png",
+        "id": "pytorch"
+      },
+      {
+        "title": "Protobuf",
+        "subtitles": ["Proficient"],
+        "image": "protobuf.png",
+        "id": "protobuf"
+      },
+      {
+        "title": "Kubernetes",
+        "subtitles": ["Intermediate"],
+        "image": "kubernetes.png",
+        "id": "kubernetes"
+      },
+      {
+        "title": "Dart",
+        "subtitles": ["Intermediate"],
+        "image": "dart.png",
+        "id": "dart"
+      },
+      {
+        "title": "SQL Databases",
+        "subtitles": ["Intermediate"],
+        "image": "sql.png",
+        "id": "sql"
+      },
+      {
+        "title": "Angular (Dart)",
+        "subtitles": ["Intermediate"],
+        "image": "angular.png",
+        "id": "angular"
+      },
+      {
+        "title": "MongoDB",
+        "subtitles": ["Intermediate"],
+        "image": "mongodb.png",
+        "id": "mongodb"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "title": "Projects",
+    "id": "projects",
+    "data": [
+      {
+        "title": "Webpage",
+        "id": "webpage",
+        "urls": [
+          {
+            "icon": "mdi-application",
+            "url": "https://jparenas.com",
+            "tooltip": "View page"
+          },
+          {
+            "icon": "mdi-github",
+            "url": "https://github.com",
+            "tooltip": "View in GitHub"
+          }
+        ],
+        "text": "Designed and implemented this personal website from scratch using Vue.js, Nuxt.js, and Vuetify, taking into consideration proper development practices and performance considerations for production deployment."
+      },
+      {
+        "title": "GameBoy Emulator",
+        "id": "gameboy",
+        "urls": [
+          {
+            "icon": "mdi-github",
+            "url": "https://github.com/jparenas/GameBoy-Emu",
+            "tooltip": "View in GitHub"
+          }
+        ],
+        "text": "Implemented a GameBoy emulator in C++, so that it can run a ROM directly from its binary contents. It features most CPU operations and video output, although it lacks audio."
+      },
+      {
+        "title": "CRM Application",
+        "id": "crm",
+        "urls": [
+          {
+            "icon": "mdi-github",
+            "url": "https://github.com/jparenas/CRM-App",
+            "tooltip": "View in GitHub"
+          }
+        ],
+        "text": "Designed and created a CRM web application in TypeScript using Vue, Vuetify, NodeJS, PostgreSQL, and GraphQL to allow full access and editing its contents, and also user authentication and RBAC."
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "title": "Awards",
+    "id": "awards",
+    "data": [
+      {
+        "title": "Dean's List",
+        "image": "depauw.png",
+        "id": "deans_list",
+        "text": "Received the Dean's List for DePauw University for the following semesters: Fall 2017, Spring 2018, Fall 2018, Spring 2019, Fall 2019."
+      },
+      {
+        "title": "Best Paper Award - Runner-Up",
+        "image": "aaai.png",
+        "id": "aaai",
+        "text": "Received the second-place runner-up award for the EAAI Birds of a Feather Undergraduate Research Challenge in 2019 due to the paper produced by research during the Summer of 2018."
+      },
+      {
+        "title": "Data Science Hackathon - First Place",
+        "image": "stmary's.png",
+        "id": "data_science_hackathon",
+        "text": "Won First Place at Saint Mary's College Data Science Hackathon in 2019, focusing in Image Recognition using PyTorch to build a monolithic neural network that recognized mathematical symbols."
+      }
+    ]
+  }
+]
