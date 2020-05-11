@@ -47,8 +47,7 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
-    '@aceforth/nuxt-optimized-images',
-    'nuxt-purgecss'
+    '@aceforth/nuxt-optimized-images'
   ],
   /*
   ** vuetify module configuration
@@ -78,6 +77,7 @@ export default {
   build: {
     analyze: true,
     extractCSS: true,
+    publicPath: dev ? '/_nuxt/' : '/public/',
     babel: {
       presets({ isServer }) {
         return [
