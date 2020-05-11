@@ -38,7 +38,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '~/plugins/scrollactive,js',
+    '~/plugins/scrollactive.js',
     { src: '~/plugins/vue-lazyload.js', ssr: false },
     ...plugins
   ],
