@@ -2,6 +2,12 @@ import colors from 'vuetify/es5/util/colors'
 
 const dev = process.env.NODE_ENV !== 'production'
 
+const plugins = []
+
+if (!dev) {
+  plugins.push({ src: '~/plugins/tracking', ssr: false })
+}
+
 export default {
   mode: 'universal',
   /*
@@ -17,7 +23,8 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    ],
+    script
   },
   /*
   ** Customize the progress-bar color
@@ -33,7 +40,8 @@ export default {
   */
   plugins: [
     '~/plugins/scrollactive',
-    { src: '~/plugins/vue-lazyload', ssr: false }
+    { src: '~/plugins/vue-lazyload', ssr: false },
+    ...plugins
   ],
   /*
   ** Nuxt.js dev-modules
