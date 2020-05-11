@@ -306,22 +306,22 @@ export default {
   }
 }
 
-.scrollactive-item a,
-.scrollactive-item a i {
+a.scrollactive-item,
+a.scrollactive-item i {
   position: relative;
   transition: color 0.75s ease;
   color: var(--v-primary-base);
   text-decoration: none;
 }
 
-.scrollactive-item a:hover,
-.scrollactive-item a i:hover {
+a.scrollactive-item:hover,
+a.scrollactive-item i:hover {
   color: var(--v-primary-lighten1);
   text-decoration: none;
   cursor: pointer;
 }
 
-.scrollactive-item a:before {
+a.scrollactive-item:before {
   content: "";
   position: absolute;
   width: 100%;
@@ -334,27 +334,27 @@ export default {
   transition: 0.2s ease-in-out;
 }
 
-.scrollactive-item a:hover:before {
+a.scrollactive-item:hover:before {
   background: #757575;
   visibility: visible;
   transform: scaleX(1);
 }
 
-.scrollactive-item a.is-active,
-.scrollactive-item a.is-active i {
+a.scrollactive-item.is-active,
+a.scrollactive-item.is-active i {
   color: #29b6f6;
 }
 
-.scrollactive-item a.is-active:hover,
-.scrollactive-item a.is-active i:hover {
+a.scrollactive-item.is-active:hover,
+a.scrollactive-item.is-active i:hover {
   color: #4fc3f7;
 }
 
-.scrollactive-item a.is-active:before {
+a.scrollactive-item.is-active:before {
   background-color: #29b6f6;
 }
 
-.scrollactive-item a.is-active:hover:before {
+a.scrollactive-item.is-active:hover:before {
   background-color: #4fc3f7;
 }
 
