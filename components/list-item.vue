@@ -29,6 +29,7 @@
                 <v-btn
                   :href="url.url"
                   target="_blank"
+                  rel="noopener"
                   icon
                   color="gray"
                   v-on="on"

@@ -24,6 +24,7 @@
         <v-btn
           href="https://github.com/jparenas"
           target="_blank"
+          rel="noopener"
           icon
           color="gray"
         >
@@ -32,6 +33,7 @@
         <v-btn
           href="https://www.linkedin.com/in/juanpablo-arenas/"
           target="_blank"
+          rel="noopener"
           icon
           color="gray"
         >
@@ -40,6 +42,7 @@
         <client-only>
           <v-btn
             :href="'mailto:' + decode('bWVAanBhcmVuYXMuY29t')"
+            rel="noopener"
             icon
             color="gray"
           >
@@ -141,7 +144,7 @@
                           justify="center"
                         >
                           <v-col cols="auto">
-                            <v-btn :href="content.data.button.url" target="_blank" class="text-center">
+                            <v-btn :href="content.data.button.url" target="_blank" rel="noopener" class="text-center">
                               <v-icon left>
                                 {{ content.data.button.icon }}
                               </v-icon> {{ content.data.button.text }}
