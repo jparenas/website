@@ -306,22 +306,22 @@ export default {
   }
 }
 
-a,
-a i {
+.scrollactive-item a,
+.scrollactive-item a i {
   position: relative;
   transition: color 0.75s ease;
-  color: var(--v-primary-base) !important;
+  color: var(--v-primary-base);
   text-decoration: none;
 }
 
-a:hover,
-a i:hover {
-  color: var(--v-primary-lighten1) !important;
+.scrollactive-item a:hover,
+.scrollactive-item a i:hover {
+  color: var(--v-primary-lighten1);
   text-decoration: none;
   cursor: pointer;
 }
 
-a:before {
+.scrollactive-item a:before {
   content: "";
   position: absolute;
   width: 100%;
@@ -334,27 +334,27 @@ a:before {
   transition: 0.2s ease-in-out;
 }
 
-a:hover:before {
+.scrollactive-item a:hover:before {
   background: #757575;
   visibility: visible;
   transform: scaleX(1);
 }
 
-a.is-active,
-a.is-active i {
+.scrollactive-item a.is-active,
+.scrollactive-item a.is-active i {
   color: #29b6f6;
 }
 
-a.is-active:hover,
-a.is-active i:hover {
+.scrollactive-item a.is-active:hover,
+.scrollactive-item a.is-active i:hover {
   color: #4fc3f7;
 }
 
-a.is-active:before {
+.scrollactive-item a.is-active:before {
   background-color: #29b6f6;
 }
 
-a.is-active:hover:before {
+.scrollactive-item a.is-active:hover:before {
   background-color: #4fc3f7;
 }
 
