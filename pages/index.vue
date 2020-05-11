@@ -310,13 +310,13 @@ a,
 a i {
   position: relative;
   transition: color 0.75s ease;
-  color: var(--v-primary-base);
+  color: var(--v-primary-base) !important;
   text-decoration: none;
 }
 
 a:hover,
 a i:hover {
-  color: var(--v-primary-lighten1);
+  color: var(--v-primary-lighten1) !important;
   text-decoration: none;
   cursor: pointer;
 }
