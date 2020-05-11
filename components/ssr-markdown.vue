@@ -14,10 +14,12 @@ export default {
     }
   },
   fetch () {
-    const md = require('markdown-it')({
-      breaks: true
-    })
-    this.text = md.render(this.data)
+    if (process.server) {
+      const md = require('markdown-it')({
+        breaks: true
+      })
+      this.text = md.render(this.data)
+    }
   },
   data () {
     return {

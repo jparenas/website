@@ -188,8 +188,6 @@ import List from '@/components/list.vue'
 import SSRMarkdown from '@/components/ssr-markdown.vue'
 import Timeline from '@/components/timeline.vue'
 
-import contents from '~/assets/content.json'
-
 const coverSizes = require('~/assets/images/background.jpg?resize&sizes[]=1440&sizes[]=1080&sizes[]=720')
 
 export default {
@@ -199,9 +197,14 @@ export default {
     SSRMarkdown,
     Timeline
   },
+  fetch () {
+    if (process.server) {
+      this.contents = require('~/assets/content.json')
+    }
+  },
   data () {
     return {
-      contents,
+      contents: [],
       coverSizes,
       atTop: true
     }
