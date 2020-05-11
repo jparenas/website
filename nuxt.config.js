@@ -5,7 +5,7 @@ const dev = process.env.NODE_ENV !== 'production'
 const plugins = []
 
 if (!dev) {
-  plugins.push({ src: '~/plugins/tracking', ssr: false })
+  plugins.push({ src: '~/plugins/vue-matomo.js', ssr: false })
 }
 
 export default {
@@ -38,8 +38,8 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '~/plugins/scrollactive',
-    { src: '~/plugins/vue-lazyload', ssr: false },
+    '~/plugins/scrollactive,js',
+    { src: '~/plugins/vue-lazyload.js', ssr: false },
     ...plugins
   ],
   /*
