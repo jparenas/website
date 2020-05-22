@@ -1,7 +1,7 @@
 <template>
   <v-timeline-item :color="item.color !== undefined ? item.color : 'red lighten-2'">
     <v-card elevation="2">
-      <div class="d-flex flex-no-wrap justify-space-between align-center">
+      <div class="d-flex flex-no-wrap justify-left align-center w-100">
         <div v-lazy-container="{ selector: 'img' }">
           <v-avatar
             class="ma-3"
@@ -15,7 +15,7 @@
           </v-avatar>
         </div>
 
-        <div>
+        <div class="flex-grow-1">
           <v-card-title
             class="headline py-2"
             style="word-break: normal;"

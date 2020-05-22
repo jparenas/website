@@ -63,7 +63,7 @@
         "id": "depauw_research",
         "color": "#FFD001",
         "image": "depauw.png",
-        "text": "* Researched Machine Learning and Artificial Intelligence.\n* Implemented a novel algorithm for a card game using Sci-kit learn in Python.\n* Paper accepted to the Association for the Advancement of Artificial Intelligence - 2019 and subsequently published (DOI: [10.1609/aaai.v33i01.33019627](https://doi.org/10.1609/aaai.v33i01.33019627)."
+        "text": "* Researched Machine Learning and Artificial Intelligence.\n* Implemented a novel algorithm for a card game using Sci-kit learn in Python.\n* Paper accepted to the Association for the Advancement of Artificial Intelligence - 2019 and subsequently published (DOI: [10.1609/aaai.v33i01.33019627](https://doi.org/10.1609/aaai.v33i01.33019627))."
       }
     ]
   },
@@ -75,91 +75,121 @@
     "data": [
       {
         "title": "C++",
-        "subtitles": ["Proficient"],
+        "subtitles": [
+          "Proficient"
+        ],
         "id": "cpp",
         "image": "c++.png"
       },
       {
         "title": "Python",
-        "subtitles": ["Proficient"],
+        "subtitles": [
+          "Proficient"
+        ],
         "id": "python",
         "image": "python.png"
       },
       {
         "title": "Java",
-        "subtitles": ["Proficient"],
+        "subtitles": [
+          "Proficient"
+        ],
         "image": "java.png",
         "id": "java"
       },
       {
         "title": "JavaScript",
-        "subtitles": ["Proficient"],
+        "subtitles": [
+          "Proficient"
+        ],
         "id": "javascript",
         "image": "javascript.png"
       },
       {
         "title": "NodeJS",
-        "subtitles": ["Proficient"],
+        "subtitles": [
+          "Proficient"
+        ],
         "id": "node",
         "image": "node.png"
       },
       {
         "title": "Docker",
-        "subtitles": ["Proficient"],
+        "subtitles": [
+          "Proficient"
+        ],
         "image": "docker.png",
         "id": "docker"
       },
       {
         "title": "Vue.js",
-        "subtitles": ["Proficient"],
+        "subtitles": [
+          "Proficient"
+        ],
         "image": "vue.png",
         "id": "vue"
       },
       {
         "title": "Git",
-        "subtitles": ["Proficient"],
+        "subtitles": [
+          "Proficient"
+        ],
         "image": "git.png",
         "id": "git"
       },
       {
         "title": "PyTorch",
-        "subtitles": ["Proficient"],
+        "subtitles": [
+          "Proficient"
+        ],
         "image": "pytorch.png",
         "id": "pytorch"
       },
       {
         "title": "Protobuf",
-        "subtitles": ["Proficient"],
+        "subtitles": [
+          "Proficient"
+        ],
         "image": "protobuf.png",
         "id": "protobuf"
       },
       {
         "title": "Kubernetes",
-        "subtitles": ["Intermediate"],
+        "subtitles": [
+          "Intermediate"
+        ],
         "image": "kubernetes.png",
         "id": "kubernetes"
       },
       {
         "title": "Dart",
-        "subtitles": ["Intermediate"],
+        "subtitles": [
+          "Intermediate"
+        ],
         "image": "dart.png",
         "id": "dart"
       },
       {
         "title": "SQL Databases",
-        "subtitles": ["Intermediate"],
+        "subtitles": [
+          "Intermediate"
+        ],
         "image": "sql.png",
         "id": "sql"
       },
       {
         "title": "Angular (Dart)",
-        "subtitles": ["Intermediate"],
+        "subtitles": [
+          "Intermediate"
+        ],
         "image": "angular.png",
         "id": "angular"
       },
       {
         "title": "MongoDB",
-        "subtitles": ["Intermediate"],
+        "subtitles": [
+          "Intermediate"
+        ],
         "image": "mongodb.png",
         "id": "mongodb"
       }

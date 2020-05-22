@@ -1,6 +1,6 @@
 <template>
   <v-card>
-    <div class="d-flex flex-no-wrap justify-space-between align-center">
+    <div class="d-flex flex-no-wrap justify-left align-center w-100">
       <div
         v-if="item.image !== undefined"
         v-lazy-container="{ selector: 'img' }"
@@ -11,7 +11,7 @@
           :data-loading="getLqipImage()"
         >
       </div>
-      <div>
+      <div class="flex-grow-1">
         <v-card-title class="py-1">
           <v-container
             fluid
