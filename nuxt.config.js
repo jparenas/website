@@ -54,7 +54,8 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
-    '@aceforth/nuxt-optimized-images'
+    '@aceforth/nuxt-optimized-images',
+    '@nuxtjs/sitemap'
   ],
   /*
   ** vuetify module configuration
