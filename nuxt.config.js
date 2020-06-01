@@ -82,6 +82,9 @@ export default {
       }
     }
   },
+  sitemap: {
+    hostname: 'https://jparenas.com'
+  },
   /*
   ** Build configuration
   */
