@@ -10,6 +10,8 @@ if (!dev) {
 
 export default {
   mode: 'universal',
+  target: 'static',
+  telemetry: false,
 
   /*
   ** Headers of the page
@@ -91,7 +93,6 @@ export default {
   ** Build configuration
   */
   build: {
-    analyze: true,
     extractCSS: true,
     publicPath: dev ? '/_nuxt/' : '/public/',
     babel: {
