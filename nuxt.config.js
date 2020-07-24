@@ -10,6 +10,7 @@ if (!dev) {
 
 export default {
   mode: 'universal',
+
   /*
   ** Headers of the page
   */
@@ -55,7 +56,8 @@ export default {
   */
   modules: [
     '@aceforth/nuxt-optimized-images',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    'nuxt-webfontloader'
   ],
   /*
   ** vuetify module configuration
@@ -118,5 +120,11 @@ export default {
 
   optimizedImages: {
     optimizeImages: true
+  },
+
+  webfontloader: {
+    google: {
+      families: ['Muli:300,400&display=swap']
+    }
   }
 }
