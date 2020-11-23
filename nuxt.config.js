@@ -9,7 +9,6 @@ if (!dev) {
 }
 
 export default {
-  mode: 'universal',
   target: 'static',
   telemetry: false,
 
