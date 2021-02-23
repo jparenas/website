@@ -68,8 +68,8 @@ export default {
     customVariables: ['~/assets/variables.scss'],
     defaultAssets: {
       font: {
-        family: 'Muli' 
-      },
+        family: 'Muli'
+      }
     },
     treeShake: true,
     theme: {
@@ -97,7 +97,7 @@ export default {
     extractCSS: true,
     publicPath: dev ? '/_nuxt/' : '/public/',
     babel: {
-      presets({ isServer }) {
+      presets ({ isServer }) {
         return [
           [
             require.resolve('@nuxt/babel-preset-app'),

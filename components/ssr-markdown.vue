@@ -13,17 +13,17 @@ export default {
       required: true
     }
   },
+  data () {
+    return {
+      text: ''
+    }
+  },
   fetch () {
     if (process.server) {
       const md = require('markdown-it')({
         breaks: true
       })
       this.text = md.render(this.data)
-    }
-  },
-  data () {
-    return {
-      text: ''
     }
   }
 }

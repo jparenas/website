@@ -25,7 +25,7 @@
               :disabled="url.tooltip === undefined"
               top
             >
-              <template v-slot:activator="{ on }">
+              <template #activator="{ on }">
                 <v-btn
                   :href="url.url"
                   target="_blank"

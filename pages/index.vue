@@ -200,16 +200,16 @@ export default {
     SSRMarkdown,
     Timeline
   },
-  fetch () {
-    if (process.server) {
-      this.contents = require('~/assets/content.json')
-    }
-  },
   data () {
     return {
       contents: [],
       coverSizes,
       atTop: true
+    }
+  },
+  fetch () {
+    if (process.server) {
+      this.contents = require('~/assets/content.json')
     }
   },
   computed: {

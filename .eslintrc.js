@@ -5,15 +5,15 @@ module.exports = {
     node: true
   },
   parserOptions: {
-    parser: "babel-eslint"
+    parser: 'babel-eslint'
   },
   extends: [
-    "@nuxtjs",
-    "eslint:recommended",
-    "plugin:nuxt/recommended",
-    "plugin:vue/recommended"
+    '@nuxtjs',
+    'eslint:recommended',
+    'plugin:nuxt/recommended',
+    'plugin:vue/recommended'
   ],
   rules: {
     'vue/no-v-html': 'off'
   }
-};
+}
