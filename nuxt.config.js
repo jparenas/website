@@ -67,7 +67,9 @@ export default {
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     defaultAssets: {
-      font: false
+      font: {
+        family: 'Muli' 
+      },
     },
     treeShake: true,
     theme: {
