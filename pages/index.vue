@@ -75,7 +75,7 @@
           :class="'text-center grey ' + ($vuetify.theme.isDark ? 'darken-2' : 'lighten-3')"
         >
           <div id="picture">
-            <v-row justify="center">
+            <v-row justify="center" class="my-1">
               <v-avatar
                 size="200"
                 :style="`border: 5px solid ${$vuetify.theme.isDark ? 'gray' : 'white'};`"
@@ -114,7 +114,7 @@
               v-for="(content, index) in contents"
               :key="content.id"
             >
-              <v-row class="mx-2">
+              <v-row class="mx-2 my-2">
                 <v-container
                   fluid
                   class="pt-0"

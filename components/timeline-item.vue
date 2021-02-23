@@ -22,14 +22,14 @@
           >
             <v-container
               fluid
-              class="py-0 my-0"
+              class="py-0 my-2"
             >
               <v-row v-text="item.title" />
-              <div v-if="item.subtitles">
+              <div v-if="item.subtitles" class="mt-1">
                 <v-row
                   v-for="(subtitle, index) in item.subtitles"
                   :key="index"
-                  class="font-weight-light subtitle-1"
+                  class="font-weight-light subtitle-1 my-0"
                   v-text="subtitle"
                 />
               </div>
