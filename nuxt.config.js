@@ -88,7 +88,11 @@ export default {
     }
   },
   sitemap: {
-    hostname: 'https://jparenas.com'
+    hostname: 'https://jparenas.com',
+    routes: [
+      '/',
+      '/resume.pdf'
+    ]
   },
   /*
   ** Build configuration
@@ -97,7 +101,7 @@ export default {
     extractCSS: true,
     publicPath: dev ? '/_nuxt/' : '/public/',
     babel: {
-      presets ({ isServer }) {
+      presets({ isServer }) {
         return [
           [
             require.resolve('@nuxt/babel-preset-app'),
