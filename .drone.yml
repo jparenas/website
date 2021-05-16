@@ -20,7 +20,7 @@ steps:
       SHARE: 
         from_secret: NFS_SHARE
     commands:
-      - hostname -I
+      - hostname -i
       - apk add --no-cache autoconf automake
       - npm install
       - npm run export
@@ -30,18 +30,16 @@ steps:
       NFS_DIRECTORY: 
         from_secret: NFS_DIRECTORY
     volumes:
-      - name: data
-        path: /src
       - name: nfs
         path: /dest
     commands:
-      - rsync -avzr --delete dist/ /src/${NFS_DIRECTORY}
+      - rsync -avzr --delete dist/ /dest/share/${NFS_DIRECTORY}
 
 services:
   - name: mount nfs
     image: d3fk/nfs-client:latest
     environment:
-      MOUNTPOINT: /nfs
+      MOUNTPOINT: /nfs/share
       FSTYPE: nfs4
       SERVER: 
         from_secret: NFS_SERVER
