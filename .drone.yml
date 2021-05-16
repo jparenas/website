@@ -15,7 +15,7 @@ steps:
   - name: generate files
     image: node:16-alpine
     commands:
-      - apk add --no-cache autoconf
+      - apk add --no-cache autoconf automake
       - npm ci
       - npm run export
   - name: sync server
