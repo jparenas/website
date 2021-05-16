@@ -4,7 +4,7 @@
     "title": "About Me",
     "id": "about-me",
     "data": {
-      "text": "I am currently a junior student at DePauw University, studying Computer Science and Mathematics. I am interested in all fields of Computer Science, although I have focused in Data Science, Machine Learning, Full Stack Development, and always trying to learn new technologies and techniques, most of them outside of the academic scope. Outside of work I like photography and walking around. You can either see my resume for a concise view of most of what is in this page, or keep looking for more information on what I have done.",
+      "text": "I am currently working at Two Sigma as a Software Engineer. I was student at DePauw University studying Computer Science and Mathematics. I am interested in all fields of Computer Science, although I have focused in Data Science, Machine Learning, Full Stack Development, and always trying to learn new technologies and techniques, most of them outside of the academic scope. Outside of work I like photography and walking around. You can either see my resume for a concise view of most of what is in this page, or keep looking for more information on what I have done.",
       "button": {
         "text": "View my Resume",
         "url": "/resume.pdf",
@@ -17,6 +17,17 @@
     "title": "Timeline",
     "id": "timeline",
     "data": [
+      {
+        "title": "Software Engineer",
+        "subtitles": [
+          "Two Sigma Investments LP",
+          "New York City, New York",
+          "02/2021 - Present}"
+        ],
+        "id": "two-sigma",
+        "color": "#009EA9",
+        "image": "two-sigma.png"
+      },
       {
         "title": "Software Engineer Intern",
         "subtitles": [
@@ -219,10 +230,15 @@
     "id": "awards",
     "data": [
       {
+        "title": "Robert J. Thomas Outstanding Senior Award",
+        "image": "depauw.png",
+        "id": "outstanding_senior"
+      },
+      {
         "title": "Dean's List",
         "image": "depauw.png",
         "id": "deans_list",
-        "text": "Received the Dean's List for DePauw University for the following semesters: Fall 2017, Spring 2018, Fall 2018, Spring 2019, Fall 2019, Spring 2020."
+        "text": "Received the Dean's List for DePauw University for the following semesters: Fall 2017, Spring 2018, Fall 2018, Spring 2019, Fall 2019, Spring 2020, Fall 2020."
       },
       {
         "title": "Best Paper Award - Runner-Up",

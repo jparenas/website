@@ -42,7 +42,10 @@
           </v-container>
         </v-card-title>
         <v-divider class="mx-2" />
-        <v-card-text class="pt-1 pb-2">
+        <v-card-text
+          v-if="item.text"
+          class="pt-1 pb-2"
+        >
           <SSRMarkdown :data="item.text" />
         </v-card-text>
       </div>
