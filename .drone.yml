@@ -20,9 +20,9 @@ steps:
       SHARE: 
         from_secret: NFS_SHARE
     commands:
-      - echo $SERVER $SHARE
+      - hostname -I
       - apk add --no-cache autoconf automake
-      - npm ci
+      - npm install
       - npm run export
   - name: sync server
     image: eeacms/rsync:latest
