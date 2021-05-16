@@ -19,13 +19,16 @@ steps:
       - npm run export
   - name: sync server
     image: eeacms/rsync:latest
+    environment:
+      NFS_DIRECTORY: 
+        from_secret: NFS_DIRECTORY
     volumes:
       - name: data
         path: /src
       - name: nfs
         path: /dest
     commands:
-      - rsync -avzr --delete dist/ /src/
+      - rsync -avzr --delete dist/ /src/${NFS_DIRECTORY}
 
 services:
   - name: mount nfs
