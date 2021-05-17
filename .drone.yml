@@ -13,7 +13,7 @@ workspace:
 
 steps:
   - name: generate files
-    image: node:16-slim
+    image: node:16-alpine
     commands:
       - apk add --no-cache autoconf automake libtool make tiff jpeg zlib zlib-dev pkgconf nasm file gcc musl-dev
       - npm install
