@@ -29,7 +29,7 @@ steps:
     commands:
       - echo "Copying from $(pwd)/dist to /dest/${NFS_DIRECTORY}/"
       - test "${NFS_DIRECTORY}" != ""
-      - rsync -avzr dist/ "/dest/${NFS_DIRECTORY}/"
+      - rsync -avr dist/ "/dest/${NFS_DIRECTORY}/"
 
 volumes:
   - name: nfs
