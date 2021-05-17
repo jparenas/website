@@ -8,7 +8,7 @@
     "dev": "nuxt",
     "build": "nuxt build --analyze",
     "start": "nuxt start",
-    "export": "nuxt generate",
+    "export": "nuxt generate --fail-on-error",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
   },
   "dependencies": {
