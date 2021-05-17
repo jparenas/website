@@ -13,15 +13,9 @@ workspace:
 
 steps:
   - name: generate files
-    image: node:16-alpine
-    environment:
-      SERVER: 
-        from_secret: NFS_SERVER
-      SHARE: 
-        from_secret: NFS_SHARE
+    image: node:16-slim
     commands:
-      - hostname -i
-      - apk add --no-cache autoconf automake
+      - apk add --no-cache autoconf automake libtool make tiff jpeg zlib zlib-dev pkgconf nasm file gcc musl-dev
       - npm install
       - npm run export
   - name: sync server
@@ -35,20 +29,7 @@ steps:
     commands:
       - rsync -avzr --delete dist/ /dest/share/${NFS_DIRECTORY}
 
-services:
-  - name: mount nfs
-    image: d3fk/nfs-client:latest
-    environment:
-      MOUNTPOINT: /nfs/share
-      FSTYPE: nfs4
-      SERVER: 
-        from_secret: NFS_SERVER
-      SHARE: 
-        from_secret: NFS_SHARE
-    volumes:
-      - name: nfs
-        path: /nfs
-
 volumes:
   - name: nfs
-    temp: {}
+    host:
+      path: /mnt/nfs
