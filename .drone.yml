@@ -14,7 +14,11 @@ workspace:
 steps:
   - name: generate files
     image: node:16-alpine
+    environment:
+      NFS_DIRECTORY: 
+        from_secret: NFS_DIRECTORY
     commands:
+      - echo $${NFS_DIRECTORY}
       - apk add --no-cache autoconf automake libtool make tiff jpeg zlib zlib-dev pkgconf nasm file gcc musl-dev
       - npm ci
       - npm run export
@@ -27,9 +31,10 @@ steps:
       - name: nfs
         path: /dest
     commands:
-      - echo "Copying from $(pwd)/dist to /dest/${NFS_DIRECTORY}/"
-      - test "${NFS_DIRECTORY}" != ""
-      - rsync -avr dist/ "/dest/${NFS_DIRECTORY}/"
+      - echo "Copying from $(pwd)/dist to /dest/$${NFS_DIRECTORY}/"
+      - test "$${NFS_DIRECTORY}" != ""
+      - rsync -avr dist/ "/dest/$${NFS_DIRECTORY}/"
+      - chown -R 1000:1000 "/dest/$${NFS_DIRECTORY}/"
 
 volumes:
   - name: nfs
