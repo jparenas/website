@@ -14,12 +14,11 @@ workspace:
 steps:
   - name: generate files
     image: node:16-slim
-    environment:
-      NFS_DIRECTORY: 
-        from_secret: NFS_DIRECTORY
     commands:
       - npm ci
       - npm run export
+      - echo "Done exporting!"
+      - ls dist/
   - name: sync server
     image: eeacms/rsync:latest
     environment:
