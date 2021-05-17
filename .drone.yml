@@ -27,7 +27,9 @@ steps:
       - name: nfs
         path: /dest
     commands:
-      - rsync -avzr --delete dist/ /dest/${NFS_DIRECTORY}/
+      - echo "Copying from $(pwd)/dist to /dest/${NFS_DIRECTORY}/"
+      - test "${NFS_DIRECTORY}" != ""
+      - rsync -avzr dist/ "/dest/${NFS_DIRECTORY}/"
 
 volumes:
   - name: nfs
