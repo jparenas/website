@@ -27,7 +27,7 @@ steps:
       - name: nfs
         path: /dest
     commands:
-      - rsync -avzr --delete dist/ /dest/share/${NFS_DIRECTORY}
+      - rsync -avzr --delete dist/ /dest/${NFS_DIRECTORY}/
 
 volumes:
   - name: nfs
