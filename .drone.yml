@@ -12,6 +12,19 @@ workspace:
   path: /drone/src
 
 steps:
+  - name: test dest directory
+    image: eeacms/rsync:latest
+    environment:
+      NFS_DIRECTORY: 
+        from_secret: NFS_DIRECTORY
+    volumes:
+      - name: nfs
+        path: /dest
+    commands:
+      - echo "Output directory set to /dest/$${NFS_DIRECTORY}/"
+      - test "$${NFS_DIRECTORY}" != ""
+      - ls /dest
+      - ls "/dest/$${NFS_DIRECTORY}/"
   - name: generate files
     image: node:16-slim
     environment:
