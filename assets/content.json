@@ -4,7 +4,7 @@
     "title": "About Me",
     "id": "about-me",
     "data": {
-      "text": "I am currently working at Two Sigma as a Software Engineer. I was student at DePauw University studying Computer Science and Mathematics. I am interested in all fields of Computer Science, although I have focused in Data Science, Machine Learning, Full Stack Development, and always trying to learn new technologies and techniques, most of them outside of the academic scope. Outside of work I like photography and walking around. You can either see my resume for a concise view of most of what is in this page, or keep looking for more information on what I have done.",
+      "text": "I am currently working at Two Sigma as a Software Engineer. I graduated from DePauw University where I studied Computer Science and Mathematics. I am interested in all fields of Computer Science, although I have focused in Data Science, Machine Learning, Full Stack Development, and always trying to learn new technologies and techniques, most of them outside of the academic scope. Outside of work I like photography and walking around. You can either see my resume for a concise view of most of what is in this page, or keep looking for more information on what I have done.",
       "button": {
         "text": "View my Resume",
         "url": "/resume.pdf",
