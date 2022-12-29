@@ -14,7 +14,8 @@
         <v-btn href="https://www.linkedin.com/in/juanpablo-arenas/" target="_blank" rel="noopener" icon color="gray">
           <v-icon>mdi-linkedin</v-icon>
         </v-btn>
-        <v-btn rel="me" href="https://mastodon.jparenas.com/@jparenas" target="_blank" icon color="gray">
+        <a rel="me" href="https://mastodon.jparenas.com/@jparenas" style="display: none;">Mastodon</a>
+        <v-btn href="https://mastodon.jparenas.com/@jparenas" rel="me" icon color="gray">
           <v-icon>mdi-mastodon</v-icon>
         </v-btn>
         <client-only>
