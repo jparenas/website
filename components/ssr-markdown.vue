@@ -1,11 +1,10 @@
 <template>
-  <span
-    ref="span"
-    v-html="text"
-  />
+  <span ref="span" v-html="text" />
 </template>
 
 <script>
+import MarkdownIt from 'markdown-it';
+
 export default {
   props: {
     data: {
@@ -13,14 +12,14 @@ export default {
       required: true
     }
   },
-  data () {
+  data() {
     return {
       text: ''
     }
   },
-  fetch () {
+  fetch() {
     if (process.server) {
-      const md = require('markdown-it')({
+      const md = MarkdownIt({
         breaks: true
       })
       this.text = md.render(this.data)

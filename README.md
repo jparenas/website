@@ -16,7 +16,11 @@ $ npm run build
 $ npm run start
 
 # generate static project
-$ npm run generate
+$ npm run export
+
+# Sync generated files
+$ cd dist
+$ rsync -azvP --delete --progress . <username>@<host>:<dir>
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).

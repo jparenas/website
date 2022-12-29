@@ -2,12 +2,6 @@ import colors from 'vuetify/es5/util/colors'
 
 const dev = process.env.NODE_ENV !== 'production'
 
-const plugins = []
-
-if (!dev) {
-  plugins.push({ src: '~/plugins/vue-matomo.js', ssr: false })
-}
-
 export default {
   target: 'static',
   telemetry: false,
@@ -25,7 +19,10 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    ],
+    script: [
+      { src: 'https://stats.jparenas.com/count.js', async: true, 'data-goatcounter': "https://stats.jparenas.com/count" }
+    ],
   },
   /*
   ** Customize the progress-bar color
@@ -42,11 +39,7 @@ export default {
   plugins: [
     '~/plugins/scrollactive.js',
     { src: '~/plugins/vue-lazyload.js', ssr: false },
-    ...plugins
   ],
-  /*
-  ** Nuxt.js dev-modules
-  */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
@@ -58,7 +51,7 @@ export default {
   modules: [
     '@aceforth/nuxt-optimized-images',
     '@nuxtjs/sitemap',
-    'nuxt-webfontloader'
+    'nuxt-webfontloader',
   ],
   /*
   ** vuetify module configuration

@@ -1,51 +1,24 @@
 <template>
   <div style="position: relative;">
-    <v-container
-      id="navbar"
-      fluid
-      :class="navBarClasses"
-    >
+    <v-container id="navbar" fluid :class="navBarClasses">
       <v-row no-gutters>
         <h2>
           Juan Pablo Arenas Uribe
         </h2>
         <v-spacer />
-        <v-switch
-          v-model="$vuetify.theme.isDark"
-          dense
-          inset
-          flat
-          :ripple="false"
-          :hide-details="true"
-          prepend-icon="mdi-brightness-3"
-          class="pt-0"
-          style="margin-top: 6px !important;"
-        />
-        <v-btn
-          href="https://github.com/jparenas"
-          target="_blank"
-          rel="noopener"
-          icon
-          color="gray"
-        >
+        <v-switch v-model="$vuetify.theme.isDark" dense inset flat :ripple="false" :hide-details="true"
+          prepend-icon="mdi-brightness-3" class="pt-0" style="margin-top: 6px !important;" />
+        <v-btn href="https://github.com/jparenas" target="_blank" rel="noopener" icon color="gray">
           <v-icon>mdi-github</v-icon>
         </v-btn>
-        <v-btn
-          href="https://www.linkedin.com/in/juanpablo-arenas/"
-          target="_blank"
-          rel="noopener"
-          icon
-          color="gray"
-        >
+        <v-btn href="https://www.linkedin.com/in/juanpablo-arenas/" target="_blank" rel="noopener" icon color="gray">
           <v-icon>mdi-linkedin</v-icon>
         </v-btn>
+        <v-btn rel="me" href="https://mastodon.jparenas.com/@jparenas" target="_blank" icon color="gray">
+          <v-icon>mdi-mastodon</v-icon>
+        </v-btn>
         <client-only>
-          <v-btn
-            :href="'mailto:' + decode('bWVAanBhcmVuYXMuY29t')"
-            rel="noopener"
-            icon
-            color="gray"
-          >
+          <v-btn :href="'mailto:' + decode('bWVAanBhcmVuYXMuY29t')" rel="noopener" icon color="gray">
             <v-icon>mdi-email</v-icon>
           </v-btn>
         </client-only>
@@ -54,95 +27,45 @@
     <style v-text="getGradientStyle" />
     <div id="background-cover">
       <div v-lazy-container="{ selector: 'img' }">
-        <img
-          id="background-cover"
-          :data-srcset="coverSizes.srcSet"
-          :data-loading="require('~/assets/images/background.jpg?lqip')"
-        >
+        <img id="background-cover" :data-srcset="coverSizes.srcSet"
+          :data-loading="require('~/assets/images/background.jpg?lqip')">
       </div>
     </div>
-    <v-container
-      id="content"
-      justify-center
-      align-center
-      class="px-0 pb-0"
-    >
+    <v-container id="content" justify-center align-center class="px-0 pb-0">
       <v-row class="elevation-4">
-        <v-col
-          id="side-bar"
-          sm="12"
-          md="3"
-          :class="'text-center grey ' + ($vuetify.theme.isDark ? 'darken-2' : 'lighten-3')"
-        >
+        <v-col id="side-bar" sm="12" md="3"
+          :class="'text-center grey ' + ($vuetify.theme.isDark ? 'darken-2' : 'lighten-3')">
           <div id="picture">
             <v-row justify="center" class="my-1">
-              <v-avatar
-                size="200"
-                :style="`border: 5px solid ${$vuetify.theme.isDark ? 'gray' : 'white'};`"
-              >
-                <img
-                  :src="require('~/assets/images/avatar.jpg?size=400').src"
-                  alt="Juan Pablo Arenas"
-                >
+              <v-avatar size="200" :style="`border: 5px solid ${$vuetify.theme.isDark ? 'gray' : 'white'};`">
+                <img :src="require('~/assets/images/avatar.jpg?size=400').src" alt="Juan Pablo Arenas">
               </v-avatar>
             </v-row>
           </div>
           <client-only>
             <v-divider v-if="$vuetify.breakpoint.mdAndUp" class="mt-4" />
           </client-only>
-          <scrollactive
-            id="links"
-            class="py-4"
-          >
-            <a
-              v-for="content in contents"
-              :key="content.id"
-              :href="`#${content.id}`"
-              class="scrollactive-item"
-            >
+          <scrollactive id="links" class="py-4">
+            <a v-for="content in contents" :key="content.id" :href="`#${content.id}`" class="scrollactive-item">
               {{ content.title }} <br>
             </a>
           </scrollactive>
         </v-col>
-        <v-col
-          md="9"
-          sm="12"
-          :class="'pa-2 '+ ($vuetify.theme.isDark ? 'grey darken-4' : 'white')"
-        >
+        <v-col md="9" sm="12" :class="'pa-2 ' + ($vuetify.theme.isDark ? 'grey darken-4' : 'white')">
           <v-container class="pa-2 ma-0">
-            <div
-              v-for="(content, index) in contents"
-              :key="content.id"
-            >
+            <div v-for="(content, index) in contents" :key="content.id">
               <v-row class="mx-2 my-2">
-                <v-container
-                  fluid
-                  class="pt-0"
-                >
+                <v-container fluid class="pt-0">
                   <v-row>
-                    <h2
-                      :id="content.id"
-                      class="pb-3"
-                    >
+                    <h2 :id="content.id" class="pb-3">
                       {{ content.title }}
                     </h2>
                   </v-row>
                   <v-row>
-                    <div
-                      v-if="content.type === 'text'"
-                    >
-                      <SSRMarkdown
-                        :data="content.data.text"
-                      />
-                      <v-container
-                        v-if="content.data.button !== undefined"
-                        fluid
-                        class="pb-0"
-                      >
-                        <v-row
-                          align="center"
-                          justify="center"
-                        >
+                    <div v-if="content.type === 'text'">
+                      <SSRMarkdown :data="content.data.text" />
+                      <v-container v-if="content.data.button !== undefined" fluid class="pb-0">
+                        <v-row align="center" justify="center">
                           <v-col cols="auto">
                             <v-btn :href="content.data.button.url" target="_blank" rel="noopener" class="text-center">
                               <v-icon left>
@@ -153,30 +76,14 @@
                         </v-row>
                       </v-container>
                     </div>
-                    <timeline
-                      v-else-if="content.type === 'timeline'"
-                      :items="content.data"
-                    />
-                    <cards
-                      v-else-if="content.type === 'cards'"
-                      :items="content.data"
-                      :cols="content.cols"
-                    />
-                    <list
-                      v-else-if="content.type === 'list'"
-                      :items="content.data"
-                    />
-                    <span
-                      v-else
-                      v-text="`Error! Type not found: ${content.type}`"
-                    />
+                    <timeline v-else-if="content.type === 'timeline'" :items="content.data" />
+                    <cards v-else-if="content.type === 'cards'" :items="content.data" :cols="content.cols" />
+                    <list v-else-if="content.type === 'list'" :items="content.data" />
+                    <span v-else v-text="`Error! Type not found: ${content.type}`" />
                   </v-row>
                 </v-container>
               </v-row>
-              <v-divider
-                v-if="index !== contents.length - 1"
-                class="my-4"
-              />
+              <v-divider v-if="index !== contents.length - 1" class="my-4" />
             </div>
           </v-container>
         </v-col>
@@ -200,27 +107,27 @@ export default {
     SSRMarkdown,
     Timeline
   },
-  data () {
+  data() {
     return {
       contents: [],
       coverSizes,
       atTop: true
     }
   },
-  fetch () {
+  fetch() {
     if (process.server) {
       this.contents = require('~/assets/content.json')
     }
   },
   computed: {
-    navBarClasses () {
+    navBarClasses() {
       let classes = 'py-2 px-2 ma-0 d-flex'
       if (!this.atTop) {
         classes += ' elevation-3 active-header'
       }
       return classes
     },
-    getGradientStyle () {
+    getGradientStyle() {
       return `#background-cover:after {
       display: block;
       position: absolute;
@@ -236,18 +143,18 @@ export default {
       }`
     }
   },
-  mounted () {
+  mounted() {
     window.addEventListener('scroll', this.checkAtTop)
     this.checkAtTop()
   },
-  destroyed () {
+  destroyed() {
     window.removeEventListener('scroll', this.checkAtTop)
   },
   methods: {
-    checkAtTop () {
+    checkAtTop() {
       this.atTop = window.scrollY === 0
     },
-    decode (str) {
+    decode(str) {
       if (!(process.client) || window === undefined) {
         return str
       }
@@ -385,10 +292,12 @@ a.scrollactive-item.is-active:hover:before {
   animation-fill-mode: forwards;
   animation-direction: normal;
   animation-timing-function: ease-out;
+
   @keyframes fadein {
     0% {
       opacity: 0;
     }
+
     100% {
       opacity: 1;
     }
