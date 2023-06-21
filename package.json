@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "jimp": "^0.16.1",
-    "nuxt": "^2.15.6",
+    "nuxt": "^3.4.3",
     "responsive-loader": "^2.3.0",
     "ufo": "^1.0.1",
     "vue-scrollactive": "^0.9.0",
